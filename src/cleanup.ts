@@ -257,7 +257,7 @@ async function rmExcept(dirName: string, keepPrefix: Set<string>, checkTimestamp
       if (isOutdated) {
         await rm(dir.path, dirent);
       }
-      return;
+      continue;
     }
 
     let name = dirent.name;
